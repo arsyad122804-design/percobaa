@@ -32,6 +32,8 @@ function startServer(port) {
       safeUrl = '/index.html';
     }
 
+    console.log(`[REQ ${new Date().toLocaleTimeString()}] ${req.method} ${safeUrl}`);
+
     const filePath = path.join(ROOT_DIR, safeUrl);
 
     // Prevent directory traversal

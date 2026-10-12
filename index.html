@@ -833,10 +833,10 @@
     </div>
 
     <!-- Hero Section Start -->
-    <section class="hero-custom position-relative d-flex flex-column justify-content-center align-items-center" style="position: relative; min-height: 88vh; margin: 16px 20px 0 20px; border-radius: 44px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25);">
+    <section class="hero-custom position-relative d-flex flex-column justify-content-center align-items-center" style="position: relative; min-height: 88vh; margin: 16px 20px 0 20px; border-radius: 44px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: #0f172a;">
         
         <!-- Video Background (Gemini Generated Video) -->
-        <video autoplay muted loop playsinline id="heroVideo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+        <video autoplay muted loop playsinline id="heroVideo" src="gemini_generated_video_c295d2a1.mp4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
             <source src="gemini_generated_video_c295d2a1.mp4" type="video/mp4">
         </video>
 
@@ -850,7 +850,7 @@
                     <!-- Logo Start -->
                     <a class="navbar-brand me-4 d-flex align-items-center" href="#" style="text-decoration: none;">
                         <div style="background: rgba(255, 255, 255, 0.95); padding: 6px 14px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); display: flex; align-items: center; transition: all 0.3s ease;">
-                            <img src="logo-alhamra.png" alt="IBS Al-Hamra" style="height: 44px; width: auto; object-fit: contain;">
+                            <img src="logo-alhamra.png?v=2" onerror="if(this.src.indexOf('ibs-1.webp')===-1){this.src='ibs-1.webp';}" alt="IBS Al-Hamra" style="height: 44px; width: auto; object-fit: contain;">
                         </div>
                     </a>
                     <!-- Logo End -->
@@ -1285,7 +1285,7 @@
                     <div class="about-footer">
                         <div class="footer-logo mb-3">
                             <div style="background: rgba(255, 255, 255, 0.95); padding: 8px 16px; border-radius: 12px; display: inline-flex; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-bottom: 14px;">
-                                <img src="logo-alhamra.png" alt="IBS Al-Hamra" style="height: 44px; width: auto; object-fit: contain;">
+                                <img src="logo-alhamra.png?v=2" onerror="if(this.src.indexOf('ibs-1.webp')===-1){this.src='ibs-1.webp';}" alt="IBS Al-Hamra" style="height: 44px; width: auto; object-fit: contain;">
                             </div>
                         </div>
                         <p class="mt-3 text-white-50" style="font-size: 15px; line-height: 1.6; max-width: 340px;">
@@ -1375,6 +1375,29 @@
                 preloader.classList.add('loaded');
             }
         });
+
+        // Hero Video Autoplay Enforcer
+        function startHeroVideo() {
+            const video = document.getElementById('heroVideo');
+            if (!video) return;
+            video.muted = true;
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function () {
+                    const playOnAction = function () {
+                        video.play();
+                        window.removeEventListener('click', playOnAction);
+                        window.removeEventListener('touchstart', playOnAction);
+                        window.removeEventListener('scroll', playOnAction);
+                    };
+                    window.addEventListener('click', playOnAction, { passive: true });
+                    window.addEventListener('touchstart', playOnAction, { passive: true });
+                    window.addEventListener('scroll', playOnAction, { passive: true });
+                });
+            }
+        }
+        document.addEventListener('DOMContentLoaded', startHeroVideo);
+        window.addEventListener('load', startHeroVideo);
 
         // Sticky Header Scroll Event
         window.addEventListener('scroll', function () {
