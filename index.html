@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <meta name="description" content="IBS Al-Hamra Malang adalah sekolah dan pesantren modern berstandar internasional, mengedepankan pendidikan karakter, akademik, dan agama Islam. Temukan informasi pendaftaran, program unggulan, dan kegiatan terbaru di sini.">
+    <meta name="keywords" content="sekolah, pesantren, pondok, IBS, alhamra, ibs al-hamra malang, ibsalhamra" />
+    <meta name="author" content="IBS Al-Hamra Malang">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="https://ibsalhamra.sch.id/ - IBS Al-Hamra Malang">
+    <meta property="og:description" content="IBS Al-Hamra Malang adalah sekolah dan pesantren modern berstandar internasional, mengedepankan pendidikan karakter, akademik, dan agama Islam.">
+    <meta property="og:image" content="logo-alhamra.png" />
+    <meta property="og:url" content="https://ibsalhamra.sch.id/" />
+    <meta property="og:type" content="Website" />
+
+    <title>https://ibsalhamra.sch.id/ - IBS Al-Hamra Malang</title>
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-alhamra.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-alhamra.png">
+    <link rel="apple-touch-icon" href="favicon-alhamra.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Playfair+Display:wght@600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Thursina Custom CSS -->
+    <link href="custom.css?v1.20" rel="stylesheet" media="screen">
+
+    <style>
+        /* Supplementary & Optimization Styles */
+        :root {
+            --primary-color: #234288;
+            --secondary-color: #e9f7fe;
+            --black-color: #000000dd;
+            --text-color: #212529;
+            --accent-color: #fdd100;
+            --white-color: #ffffff;
+            --divider-color: #12223b30;
+            --dark-divider-color: #ffffff20;
+            --overlay-color: #00000066;
+            --default-font: "DM Sans", open-sans, sans-serif;
+            --accent-font: "Manrope", open-sans, sans-serif;
+        }
+
+        body {
+            font-family: var(--default-font);
+            color: var(--text-color);
+            background-color: var(--white-color);
+            overflow-x: hidden;
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loading-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loading {
+            width: 90px;
+            height: 90px;
+            border: 3px solid rgba(35, 66, 136, 0.15);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        #loading-icon img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 45px;
+            height: auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Navbar Enhancements */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            transition: all 0.35s ease;
+            background: transparent;
+            backdrop-filter: none;
+            padding: 16px 0;
+        }
+        .main-header.scrolled {
+            background: rgba(18, 34, 59, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+        }
+        .main-header .nav-link {
+            color: #ffffff !important;
+            font-family: var(--accent-font);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 14px !important;
+            transition: all 0.25s ease;
+        }
+        .main-header .nav-link.active-green,
+        .main-header .nav-link:hover {
+            color: #10b981 !important;
+        }
+        
+        .navbar-brand img {
+            height: 48px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+            margin: 0 3px;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-family: var(--accent-font);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 10px 14px !important;
+            transition: all 0.25s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Dropdown Menus */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 10px;
+            background: #ffffff;
+            animation: fadeIn 0.25s ease-in-out;
+        }
+        .dropdown-menu .dropdown-item {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            color: #212529;
+            transition: all 0.2s ease;
+        }
+        .dropdown-menu .dropdown-item:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateX(4px);
+        }
+
+        /* Highlighted Menu (Enrol Now) */
+        .highlighted-menu .nav-link {
+            background: var(--accent-color);
+            color: #12223b !important;
+            border-radius: 25px;
+            padding: 8px 20px !important;
+            font-weight: 700;
+            margin-left: 10px;
+            box-shadow: 0 4px 12px rgba(253, 209, 0, 0.3);
+        }
+        .highlighted-menu .nav-link:hover {
+            background: #e6bd00;
+            color: #000 !important;
+            transform: translateY(-2deg);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: #12223b;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #ffffff;
+            text-align: center;
+            padding: 180px 0 140px;
+        }
+        .hero-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .hero-bg-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.55;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(18, 34, 59, 0.6) 0%, rgba(18, 34, 59, 0.85) 100%);
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-content h3 {
+            font-size: 24px;
+            color: var(--accent-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .hero-content h1 {
+            font-size: 56px;
+            color: #ffffff;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Section Titles */
+        .section-title h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .section-title h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .section-title p {
+            font-size: 16px;
+            color: #555;
+            max-width: 750px;
+            margin: 0 auto 30px;
+        }
+
+        /* Cards & Styling */
+        .blog-item {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f0f0f0;
+        }
+        .blog-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(35, 66, 136, 0.12);
+        }
+        .post-featured-image {
+            overflow: hidden;
+            height: 230px;
+        }
+        .post-featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .blog-item:hover .post-featured-image img {
+            transform: scale(1.08);
+        }
+        .post-item-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .tanggal-post {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .tanggal-post i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+        .post-item-body h5 a {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.4;
+            transition: color 0.2s ease;
+        }
+        .post-item-body h5 a:hover {
+            color: #1a3166;
+        }
+        .desc-post {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .readmore-btn {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: auto;
+            position: relative;
+        }
+        .readmore-btn::after {
+            content: " →";
+            transition: margin-left 0.2s ease;
+        }
+        .readmore-btn:hover::after {
+            margin-left: 5px;
+        }
+
+        /* Thursina Fact Item */
+        .why-choose-item {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        .why-choose-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        .icon-box img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .why-choose-counter h3 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        .why-choose-counter p {
+            font-weight: 700;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        .why-choose-image figure {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            max-height: 280px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .why-choose-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Our Philosophy Section */
+        .our-mission-vision {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+        }
+        .service-item {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+            margin-bottom: 30px;
+            height: calc(100% - 30px);
+            transition: all 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(35, 66, 136, 0.1);
+        }
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .service-item:hover .service-image img {
+            transform: scale(1.06);
+        }
+        .service-body {
+            padding: 24px;
+        }
+        .service-body-title h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Swiper Recognitions & Testimonials */
+        .our-blog, .our-testimonial, .our-faqs, .quick-launch, .contact-us, .sponsored {
+            padding: 80px 0;
+        }
+        .recog-item {
+            text-align: center;
+            background: #fff;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #eaeaea;
+            transition: all 0.3s ease;
+        }
+        .recog-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+        .img-recog-slide {
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        /* Enrol Box CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #234288 0%, #152b5b 100%);
+            border-radius: 24px;
+            color: #ffffff;
+            padding: 60px 40px;
+            margin: 40px auto;
+            box-shadow: 0 20px 50px rgba(35, 66, 136, 0.3);
+        }
+        .cta-box h2 {
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .btn-large {
+            padding: 14px 32px;
+            font-size: 16px;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+        .btn-default {
+            background: var(--accent-color);
+            color: #12223b;
+            font-weight: 700;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(253, 209, 0, 0.3);
+        }
+        .btn-default:hover {
+            background: #e6bd00;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonial Cards */
+        .testimonial-item {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f0f0f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .testimonial-rating {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .testimonial-content p {
+            font-size: 15px;
+            color: #444;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .testimonial-body {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .author-image {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .author-content h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        .author-content p {
+            font-size: 13px;
+            color: #777;
+            margin: 0;
+        }
+
+        /* FAQ Accordion */
+        .accordion-item {
+            border: 1px solid #e5e8ed;
+            border-radius: 12px !important;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .accordion-button {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 16px;
+            padding: 18px 24px;
+            background: #ffffff;
+            box-shadow: none !important;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .accordion-body {
+            padding: 20px 24px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Contact Sidebar & Form */
+        .contact-sidebar {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 35px;
+            border-radius: 20px;
+        }
+        .contact-info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .contact-info .icon-box {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .contact-info .icon-box img {
+            width: 22px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 0;
+        }
+        .contact-info-content p {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin: 0;
+            font-weight: 700;
+        }
+        .contact-info-content h3 {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 600;
+            margin: 5px 0 0;
+            line-height: 1.4;
+        }
+        .contact-info-content h3 a {
+            color: #ffffff;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 18px;
+            border: 1px solid #e0e0e0;
+            font-size: 15px;
+        }
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(35, 66, 136, 0.15);
+        }
+
+        /* Quick Launch Icons */
+        .quick-item-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #eaeaea;
+            transition: all 0.3s ease;
+        }
+        .quick-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(35, 66, 136, 0.1);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #12223b;
+            color: #ffffff;
+            padding: 70px 0 30px;
+        }
+        .footer-logo img {
+            height: 48px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+        .footer-links h3 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        .footer-links ul li a:hover {
+            color: var(--accent-color);
+        }
+        .footer-info-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .footer-info-box .icon-box img {
+            width: 18px;
+            margin-right: 12px;
+            filter: brightness(0) invert(1);
+        }
+        .footer-info-box p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .footer-copyright {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-social-links ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-social-links a {
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .footer-social-links a:hover {
+            background: var(--accent-color);
+            color: #12223b;
+            transform: translateY(-3px);
+        }
+
+        /* Floating Action Widgets */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(35, 66, 136, 0.15) !important;
+        }
+
+        @media (max-width: 991px) {
+            .hero-text-box h1 { font-size: 32px !important; }
+            .hero-custom { padding: 140px 0 80px !important; min-height: auto !important; }
+            .section-title h2 { font-size: 30px; }
+            .cta-box h2 { font-size: 30px; }
+            .cta-box { padding: 30px; }
+            .footer-social-links ul { justify-content: flex-start; margin-top: 15px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader" id="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon">
+                <img src="favicon-alhamra.png" alt="Loading IBS Al-Hamra...">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 16px;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title font-weight-bold" id="searchModalLabel" style="color: var(--primary-color);">Cari Informasi IBS Al-Hamra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://ibsalhamra.sch.id/" method="GET">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="keyword" placeholder="Masukkan kata kunci pencarian..." required>
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i> Cari</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section Start -->
+    <section class="hero-custom position-relative d-flex flex-column justify-content-center align-items-center" style="position: relative; min-height: 88vh; margin: 16px 20px 0 20px; border-radius: 44px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25);">
+        
+        <!-- Video Background (Gemini Generated Video) -->
+        <video autoplay muted loop playsinline id="heroVideo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+            <source src="gemini_generated_video_c295d2a1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Video Overlay with Gradient -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.58) 100%); z-index: 2; pointer-events: none;"></div>
+        
+        <!-- Header Start Inside Hero Section -->
+        <header class="main-header" id="mainHeader" style="position: absolute; top: 0; left: 0; right: 0; width: 100%; z-index: 1000;">
+            <div class="container-fluid px-lg-5">
+                <nav class="navbar navbar-expand-xl navbar-dark p-0">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand me-4 d-flex align-items-center" href="#" style="text-decoration: none;">
+                        <div style="background: rgba(255, 255, 255, 0.95); padding: 6px 14px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); display: flex; align-items: center; transition: all 0.3s ease;">
+                            <img src="logo-alhamra.png" alt="IBS Al-Hamra" style="height: 44px; width: auto; object-fit: contain;">
+                        </div>
+                    </a>
+                    <!-- Logo End -->
+
+                    <!-- Mobile Toggle -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#alhamraNavbar" aria-controls="alhamraNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navigation Menu Start -->
+                    <div class="collapse navbar-collapse" id="alhamraNavbar">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-xl-center" style="gap: 4px;">
+                            
+                            <!-- Home -->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" style="color: #10b981 !important; font-weight: 700; font-size: 15px; padding: 10px 14px;" data-i18n="nav_home">Home</a>
+                            </li>
+
+                            <!-- Tentang Sekolah Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;">
+                                    <span data-i18n="nav_about">Tentang Sekolah</span> <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px; color: #10b981;"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3 mt-2" style="background-color: #12223b;">
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_profil">Profil Sekolah</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_visi">Visi & Misi</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_sambutan">Sambutan Pimpinan</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_fasilitas">Fasilitas</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_pendidik">Tenaga Pendidik</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Jenjang Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;">
+                                    <span data-i18n="nav_education">Jenjang</span> <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px; color: #10b981;"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3 mt-2" style="background-color: #12223b;">
+                                    <li><a class="dropdown-item py-2" href="https://ibsalhamra.sch.id/" data-i18n="nav_smp">SMP IBS Al-Hamra</a></li>
+                                    <li><a class="dropdown-item py-2" href="https://ibsalhamra.sch.id/" data-i18n="nav_sma">SMA IBS Al-Hamra</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_program_unggulan">Program Unggulan</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Penerimaan Santri Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;">
+                                    <span data-i18n="nav_admissions">Penerimaan Santri</span> <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px; color: #10b981;"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3 mt-2" style="background-color: #12223b;">
+                                    <li><a class="dropdown-item py-2" href="https://ibsalhamra.sch.id/" target="_blank" data-i18n="nav_ppdb_info">Informasi PPDB</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_syarat">Syarat Pendaftaran</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_alur">Alur Pendaftaran</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_biaya">Biaya Pendidikan</a></li>
+                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_brosur">Brosur & Download</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Galeri -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;" data-i18n="nav_gallery">Galeri</a>
+                            </li>
+
+                            <!-- PPDB -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://ibsalhamra.sch.id/" target="_blank" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;" data-i18n="nav_ppdb">PPDB</a>
+                            </li>
+
+                            <!-- Berita -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;" data-i18n="nav_news">Berita</a>
+                            </li>
+
+                            <!-- Kontak -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;" data-i18n="nav_contact">Kontak</a>
+                            </li>
+
+                            <!-- Login -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 14px;" data-i18n="nav_login">Login</a>
+                            </li>
+
+                        </ul>
+
+                        <!-- Right Controls: Search & Language Switcher -->
+                        <div class="d-flex align-items-center ms-auto gap-2">
+                            <a href="#" class="nav-link p-2 text-white opacity-90" data-bs-toggle="modal" data-bs-target="#searchModal" title="Cari">
+                                <i class="fa fa-search" style="font-size: 16px;"></i>
+                            </a>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-light dropdown-toggle rounded-pill px-3 py-1 text-white border-0 d-flex align-items-center" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); font-size: 13px; font-weight: 600; cursor: pointer;">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" alt="English" width="16" class="me-1.5 rounded-circle" id="currentLangFlag"> <span id="currentLangText">EN</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-3 mt-2" aria-labelledby="langDropdown" style="background-color: rgba(18, 34, 59, 0.96) !important; backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2) !important; z-index: 99999 !important;">
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-2 text-white lang-option" href="javascript:void(0);" data-lang="ID" data-flag="https://cdn-icons-png.flaticon.com/128/11654/11654463.png" style="color: #ffffff !important; font-weight: 600; cursor: pointer;">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/11654/11654463.png" alt="Indonesia" width="16" class="me-2 rounded-circle"> Indonesia
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-2 text-white lang-option" href="javascript:void(0);" data-lang="EN" data-flag="https://cdn-icons-png.flaticon.com/128/197/197374.png" style="color: #ffffff !important; font-weight: 600; cursor: pointer;">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" alt="English" width="16" class="me-2 rounded-circle"> English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center py-2 text-white lang-option" href="javascript:void(0);" data-lang="AR" data-flag="https://cdn-icons-png.flaticon.com/128/197/197578.png" style="color: #ffffff !important; font-weight: 600; cursor: pointer;">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/197/197578.png" alt="العربية" width="16" class="me-2 rounded-circle"> العربية (Arab)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Menu End -->
+                </nav>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Center Hero Content -->
+        <div class="container text-center py-5 my-auto" style="position: relative; z-index: 3; margin-top: 60px !important; margin-bottom: 40px !important; width: 100%;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-11 col-xl-10 mx-auto text-center">
+                    <div class="hero-text-box animate__animated animate__fadeInUp d-flex flex-column align-items-center justify-content-center text-center">
+                        <span class="badge-tag mb-3 text-center" style="color: #fdd100; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; display: inline-block;" data-i18n="hero_badge">
+                            WELCOME TO
+                        </span>
+                        <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif; font-size: 68px; font-weight: 800; color: #ffffff; line-height: 1.12; letter-spacing: -1.8px; margin-bottom: 22px; text-shadow: 0 4px 30px rgba(0,0,0,0.6); max-width: 1050px; margin-left: auto; margin-right: auto; text-align: center;" data-i18n="hero_title">
+                            IBS Al-Hamra Malang
+                        </h1>
+                        <p class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.95); line-height: 1.45; max-width: 880px; margin-left: auto; margin-right: auto; text-shadow: 0 2px 15px rgba(0,0,0,0.5); text-align: center;" data-i18n="hero_subtitle">
+                            Menyiapkan Generasi Muslim Unggulan Dengan Fondasi Akhlak Al-Qur'an
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Main Content Area Start -->
+    <main role="main">
+
+        <!-- Program Unggulan Section Start -->
+        <section class="program-section py-5" style="background-color: #f8fafc;">
+            <div class="container py-4">
+                
+                <!-- Header Badge -->
+                <div class="row section-row text-center mb-5">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span class="badge rounded-pill px-3 py-2 mb-2" style="background: rgba(35, 66, 136, 0.1); color: var(--primary-color); font-weight: 700; font-size: 14px; letter-spacing: 1px;" data-i18n="sec_badge">
+                                PROGRAM UNGGULAN
+                            </span>
+                            <h2 style="font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--primary-color);" data-i18n="sec_title">
+                                Jenjang Pendidikan IBS Al-Hamra
+                            </h2>
+                            <p class="text-muted mx-auto" style="max-width: 700px; font-size: 16px;" data-i18n="sec_subtitle">
+                                Pilihan program pendidikan yang dirancang untuk membentuk generasi Muslim unggulan yang berakhlak mulia, berilmu modern, dan berwawasan global.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 Big Program Cards: SMP & SMA -->
+                <div class="row g-4 mb-5 align-items-stretch">
+                    
+                    <!-- Card Program SMP -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="card w-100 h-100 border-0 rounded-4 overflow-hidden shadow-sm hover-lift d-flex flex-column" style="transition: all 0.35s ease; border: 1px solid rgba(35, 66, 136, 0.1) !important;">
+                            <div class="p-4 p-md-5 d-flex flex-column justify-content-between flex-grow-1" style="background: linear-gradient(135deg, #1e3a8a 0%, #234288 100%); color: #ffffff;">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <span class="badge rounded-pill px-3 py-2" style="background: #fdd100; color: #12223b; font-weight: 800;" data-i18n="badge_smp">JENJANG SMP</span>
+                                        <i class="fa-solid fa-graduation-cap fs-3 opacity-75"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32px; color: #ffffff; margin-bottom: 12px;" data-i18n="card_smp_title">
+                                        Program SMP
+                                    </h3>
+                                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 15px; line-height: 1.6; margin-bottom: 24px; text-align: justify; text-justify: inter-word;" data-i18n="card_smp_desc">
+                                        SMP IBS Alhamra memiliki sistem pendidikan yang berbasis pada kurikulum Islam untuk menyiapkan generasi muslim unggulan di masa depan.
+                                    </p>
+                                </div>
+                                <div class="mt-auto pt-3">
+                                    <a href="https://ibsalhamra.sch.id/" class="btn btn-emerald rounded-pill px-4 py-2 font-weight-bold text-white" style="background-color: #059669; border: none; transition: all 0.3s ease;" data-i18n="btn_smp">
+                                        Pelajari Program SMP <i class="fa-solid fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="position-relative overflow-hidden flex-shrink-0" style="height: 240px;">
+                                <img src="https://media.thursinaiibs.sch.id/portal/home_sections/background_picture_repeater-fakta_thursina-20251103-bg-1.jpg" alt="Program SMP IBS Alhamra" class="w-100 h-100" style="object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Program SMA -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="card w-100 h-100 border-0 rounded-4 overflow-hidden shadow-sm hover-lift d-flex flex-column" style="transition: all 0.35s ease; border: 1px solid rgba(35, 66, 136, 0.1) !important;">
+                            <div class="p-4 p-md-5 d-flex flex-column justify-content-between flex-grow-1" style="background: linear-gradient(135deg, #1e3a8a 0%, #234288 100%); color: #ffffff;">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <span class="badge rounded-pill px-3 py-2" style="background: #fdd100; color: #12223b; font-weight: 800;" data-i18n="badge_sma">JENJANG SMA</span>
+                                        <i class="fa-solid fa-award fs-3 opacity-75"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32px; color: #ffffff; margin-bottom: 12px;" data-i18n="card_sma_title">
+                                        Program SMA
+                                    </h3>
+                                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 15px; line-height: 1.6; margin-bottom: 24px; text-align: justify; text-justify: inter-word;" data-i18n="card_sma_desc">
+                                        SMA IBS Alhamra merupakan program lanjutan para santri yang dipersiapkan untuk menjadi insan kreatif untuk berkontribusi dalam peradaban Islam.
+                                    </p>
+                                </div>
+                                <div class="mt-auto pt-3">
+                                    <a href="https://ibsalhamra.sch.id/" class="btn btn-emerald rounded-pill px-4 py-2 font-weight-bold text-white" style="background-color: #059669; border: none; transition: all 0.3s ease;" data-i18n="btn_sma">
+                                        Pelajari Program SMA <i class="fa-solid fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="position-relative overflow-hidden flex-shrink-0" style="height: 240px;">
+                                <img src="https://media.thursinaiibs.sch.id/portal/post/202605/featured/post-202605-595.png" alt="Program SMA IBS Alhamra" class="w-100 h-100" style="object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Program SMP Details Section -->
+                <div class="pt-4 pb-4">
+                    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 pb-2 border-bottom">
+                        <div>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--primary-color);" class="mb-1">
+                                Program SMP IBS Al-Hamra
+                            </h3>
+                            <p class="text-muted mb-md-0" style="font-size: 15px;">Fokus pada pengembangan karakter, akademis unggul, dan fondasi Al-Qur'an.</p>
+                        </div>
+                        <a href="https://ibsalhamra.sch.id/" target="_blank" class="btn rounded-pill px-4 py-2 font-weight-bold text-white mt-3 mt-md-0" style="background-color: #059669; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);">
+                            Daftar Program SMP <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Card 1: Akademik -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-0" style="border: 1px solid #f0f0f0 !important; transition: all 0.3s ease;">
+                                <div style="height: 200px;" class="overflow-hidden">
+                                    <img src="https://media.thursinaiibs.sch.id/portal/post/202609/featured/post-202609202609208.jpg" alt="Sistem Akademik" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-4">
+                                    <h4 style="font-size: 20px; font-weight: 700; color: var(--primary-color);" class="mb-3">
+                                        Sistem Pengajaran Akademik
+                                    </h4>
+                                    <ul class="list-unstyled mb-0 text-muted" style="font-size: 14px; line-height: 1.8;">
+                                        <li class="mb-2 d-flex align-items-start">
+                                             <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span>Kelas kecil jumlah santri antara 20 s/d 25 santri</span>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span>Kurikulum Nasional sesuai arahan DIKNAS</span>
+                                        </li>
+                                        <li class="d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span>Dipadukan dengan kurikulum kepesantrenan</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Pengasuhan -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-0" style="border: 1px solid #f0f0f0 !important; transition: all 0.3s ease;">
+                                <div style="height: 200px;" class="overflow-hidden">
+                                    <img src="https://media.thursinaiibs.sch.id/portal/post/202609/featured/post-202609202609550.jpg" alt="Sistem Pengasuhan" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-4">
+                                    <h4 style="font-size: 20px; font-weight: 700; color: var(--primary-color);" class="mb-3">
+                                        Sistem Pengasuhan
+                                    </h4>
+                                    <ul class="list-unstyled mb-0 text-muted" style="font-size: 14px; line-height: 1.8;">
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span>1 Kamar berisi 8 - 10 Santri</span>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span>1 Kamar dibina oleh 1 Musyrif</span>
+                                        </li>
+                                        <li class="d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span>1 Halaqoh Qur'an berisi 7 s/d 10 santri</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Tahfidzh -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-0" style="border: 1px solid #f0f0f0 !important; transition: all 0.3s ease;">
+                                <div style="height: 200px;" class="overflow-hidden">
+                                    <img src="https://media.thursinaiibs.sch.id/portal/post/202605/featured/post-202605-947.jpg" alt="Program Tahfidzh" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-4">
+                                    <h4 style="font-size: 20px; font-weight: 700; color: var(--primary-color);" class="mb-3">
+                                        Program Unggulan Tahfidzh
+                                    </h4>
+                                    <ul class="list-unstyled mb-0 text-muted" style="font-size: 14px; line-height: 1.7;">
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span><strong>Kelas Reguler</strong>: Target min 5 Juz dalam 3 thn (halaqah 3x/hari)</span>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span><strong>Kelas Intensif</strong>: Target min 30 Juz dalam 3 thn (halaqah 4x/hari)</span>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span><strong>Tahsin & Tasmi' Qur'an</strong> (3 Juz, 5 Juz, 10 Juz)</span>
+                                        </li>
+                                        <li class="d-flex align-items-start">
+                                            <i class="fa-solid fa-circle-check text-success me-2 mt-1"></i>
+                                            <span><strong>Wisuda Tahfidz</strong> berkala</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program SMA Details Section -->
+                <div class="pt-5">
+                    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 pb-2 border-bottom">
+                        <div>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--primary-color);" class="mb-1">
+                                Program SMA IBS Al-Hamra
+                            </h3>
+                            <p class="text-muted mb-md-0" style="font-size: 15px;">Tiga penjurusan spesialisasi abad 21 berbasis integrasi sains & Islam.</p>
+                        </div>
+                        <a href="https://ibsalhamra.sch.id/" target="_blank" class="btn rounded-pill px-4 py-2 font-weight-bold text-white mt-3 mt-md-0" style="background-color: #059669; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);">
+                            Daftar Program SMA <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Card 1: Digital Entrepreneur -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-0" style="border: 1px solid #f0f0f0 !important; transition: all 0.3s ease;">
+                                <div style="height: 200px;" class="overflow-hidden">
+                                    <img src="https://media.thursinaiibs.sch.id/portal/post/202609/featured/post-202609202609322.jpg" alt="Digital Entrepreneur" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-4 d-flex flex-column justify-content-between h-100">
+                                    <div>
+                                        <h4 style="font-size: 20px; font-weight: 700; color: var(--primary-color);" class="mb-2">
+                                            Digital Entrepreneur
+                                        </h4>
+                                        <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
+                                            Mencetak pengusaha muslim kreatif yang mampu membangun bisnis digital, memahami tren teknologi, dan berlandaskan nilai Islam.
+                                        </p>
+                                    </div>
+                                    <a href="https://ibsalhamra.sch.id/" class="text-decoration-none font-weight-bold text-primary mt-3 d-inline-block" style="font-size: 14px;">
+                                        Pelajari Program Studi <i class="fa-solid fa-circle-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Moslem Scholar -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-0" style="border: 1px solid #f0f0f0 !important; transition: all 0.3s ease;">
+                                <div style="height: 200px;" class="overflow-hidden">
+                                    <img src="https://media.thursinaiibs.sch.id/portal/post/202609/featured/post-202609202609813.jpg" alt="Moslem Scholar" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-4 d-flex flex-column justify-content-between h-100">
+                                    <div>
+                                        <h4 style="font-size: 20px; font-weight: 700; color: var(--primary-color);" class="mb-2">
+                                            Moslem Scholar
+                                        </h4>
+                                        <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
+                                            Membina ulama intelektual dengan ilmu syar'i mendalam serta kemampuan menjawab tantangan zaman modern.
+                                        </p>
+                                    </div>
+                                    <a href="https://ibsalhamra.sch.id/" class="text-decoration-none font-weight-bold text-primary mt-3 d-inline-block" style="font-size: 14px;">
+                                        Pelajari Program Studi <i class="fa-solid fa-circle-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: IT Engineering -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 border-0 rounded-4 shadow-sm bg-white overflow-hidden p-0" style="border: 1px solid #f0f0f0 !important; transition: all 0.3s ease;">
+                                <div style="height: 200px;" class="overflow-hidden">
+                                    <img src="https://media.thursinaiibs.sch.id/portal/home_sections/open-minded.jpg" alt="IT Engineering" class="w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="p-4 d-flex flex-column justify-content-between h-100">
+                                    <div>
+                                        <h4 style="font-size: 20px; font-weight: 700; color: var(--primary-color);" class="mb-2">
+                                            IT Engineering
+                                        </h4>
+                                        <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
+                                            Menyiapkan ahli teknologi yang kompeten di bidang pemrograman, jaringan, dan inovasi digital dengan karakter Islami.
+                                        </p>
+                                    </div>
+                                    <a href="https://ibsalhamra.sch.id/" class="text-decoration-none font-weight-bold text-primary mt-3 d-inline-block" style="font-size: 14px;">
+                                        Pelajari Program Studi <i class="fa-solid fa-circle-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Program Unggulan Section End -->
+
+        <!-- All extra sections removed as requested -->
+
+    </main>
+    <!-- Main Content Area End -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                
+                <!-- Column 1: Brand & Tagline -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="about-footer">
+                        <div class="footer-logo mb-3">
+                            <div style="background: rgba(255, 255, 255, 0.95); padding: 8px 16px; border-radius: 12px; display: inline-flex; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-bottom: 14px;">
+                                <img src="logo-alhamra.png" alt="IBS Al-Hamra" style="height: 44px; width: auto; object-fit: contain;">
+                            </div>
+                        </div>
+                        <p class="mt-3 text-white-50" style="font-size: 15px; line-height: 1.6; max-width: 340px;">
+                            Menyiapkan generasi muslim unggulan dengan fondasi akhlak Al-Quran.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Kontak Kami -->
+                <div class="col-lg-5 col-md-7 col-12">
+                    <div class="footer-links footer-contact-box">
+                        <h3>Kontak Kami</h3>
+                        
+                        <div class="footer-info-box">
+                            <div class="icon-box">
+                                <img src="https://thursinaiibs.sch.id/assets/template-baru/images/icon-location.svg" alt="Lokasi">
+                            </div>
+                            <p>Kompleks Masjid Salman Al Farisi Jln. Raya Karangampel RT 08 RW 02 Desa Karang Widoro Kecamatan Dau – Kabupaten Malang</p>
+                        </div>
+
+                        <div class="footer-info-box">
+                            <div class="icon-box">
+                                <img src="https://thursinaiibs.sch.id/assets/template-baru/images/icon-phone.svg" alt="Telepon">
+                            </div>
+                            <p><a href="tel:081212337616" class="text-white">0812-1233-7616</a></p>
+                        </div>
+
+                        <div class="footer-info-box">
+                            <div class="icon-box">
+                                <img src="https://thursinaiibs.sch.id/assets/template-baru/images/icon-mail.svg" alt="Email">
+                            </div>
+                            <p><a href="mailto:info@ibsalhamra.sch.id" class="text-white">info@ibsalhamra.sch.id</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Link Cepat -->
+                <div class="col-lg-3 col-md-5 col-12">
+                    <div class="footer-links">
+                        <h3>Link Cepat</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="https://ibsalhamra.sch.id/">SMP</a></li>
+                            <li><a href="https://ibsalhamra.sch.id/">SMA</a></li>
+                            <li><a href="https://ibsalhamra.sch.id/" target="_blank">Penerimaan Santri Baru</a></li>
+                            <li><a href="https://ibsalhamra.sch.id/" target="_blank">Penerimaan Santri Indent</a></li>
+                            <li><a href="https://ibsalhamra.sch.id/" target="_blank">PPDB</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-copyright">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-7">
+                        <p class="mb-0 text-white-50">© 2026 IBS Al-Hamra Malang. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank" title="Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                                <li><a href="#" target="_blank" title="Youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="#" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        // Preloader Hide
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('loaded');
+            }
+        });
+
+        // Sticky Header Scroll Event
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Swiper Initializations
+        new Swiper('.recogSwiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            autoplay: { delay: 3000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                640: { slidesPerView: 3, spaceBetween: 20 },
+                768: { slidesPerView: 4, spaceBetween: 25 },
+                1024: { slidesPerView: 5, spaceBetween: 30 }
+            }
+        });
+
+        new Swiper('.testimonialSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 30 }
+            }
+        });
+
+        new Swiper('.quickSwiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            breakpoints: {
+                640: { slidesPerView: 3, spaceBetween: 20 },
+                1024: { slidesPerView: 5, spaceBetween: 25 }
+            }
+        });
+
+        new Swiper('.uniSwiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: { delay: 2500, disableOnInteraction: false },
+            breakpoints: {
+                640: { slidesPerView: 4, spaceBetween: 30 },
+                1024: { slidesPerView: 6, spaceBetween: 40 }
+            }
+        });
+
+        // Full i18n Multi-Language Translation System (ID, EN, AR)
+        const i18nData = {
+            ID: {
+                dir: 'ltr',
+                nav_home: 'Home',
+                nav_about: 'Tentang Sekolah',
+                nav_about_profil: 'Profil Sekolah',
+                nav_about_visi: 'Visi & Misi',
+                nav_about_sambutan: 'Sambutan Pimpinan',
+                nav_about_fasilitas: 'Fasilitas',
+                nav_about_pendidik: 'Tenaga Pendidik',
+                nav_education: 'Jenjang',
+                nav_smp: 'SMP IBS Al-Hamra',
+                nav_sma: 'SMA IBS Al-Hamra',
+                nav_program_unggulan: 'Program Unggulan',
+                nav_admissions: 'Penerimaan Santri',
+                nav_ppdb_info: 'Informasi PPDB',
+                nav_syarat: 'Syarat Pendaftaran',
+                nav_alur: 'Alur Pendaftaran',
+                nav_biaya: 'Biaya Pendidikan',
+                nav_brosur: 'Brosur & Download',
+                nav_gallery: 'Galeri',
+                nav_ppdb: 'PPDB',
+                nav_news: 'Berita',
+                nav_contact: 'Kontak',
+                nav_login: 'Login',
+
+                hero_badge: 'WELCOME TO',
+                hero_title: 'IBS Al-Hamra Malang',
+                hero_subtitle: 'Menyiapkan Generasi Muslim Unggulan Dengan Fondasi Akhlak Al-Qur\'an',
+
+                sec_badge: 'PROGRAM UNGGULAN',
+                sec_title: 'Jenjang Pendidikan IBS Al-Hamra',
+                sec_subtitle: 'Pilihan program pendidikan yang dirancang untuk membentuk generasi Muslim unggulan yang berakhlak mulia, berilmu modern, dan berwawasan global.',
+                
+                badge_smp: 'JENJANG SMP',
+                card_smp_title: 'Program SMP',
+                card_smp_desc: 'SMP IBS Alhamra memiliki sistem pendidikan yang berbasis pada kurikulum Islam untuk menyiapkan generasi muslim unggulan di masa depan.',
+                btn_smp: 'Pelajari Program SMP',
+
+                badge_sma: 'JENJANG SMA',
+                card_sma_title: 'Program SMA',
+                card_sma_desc: 'SMA IBS Alhamra merupakan program lanjutan para santri yang dipersiapkan untuk menjadi insan kreatif untuk berkontribusi dalam peradaban Islam.',
+                btn_sma: 'Pelajari Program SMA'
+            },
+            EN: {
+                dir: 'ltr',
+                nav_home: 'Home',
+                nav_about: 'About School',
+                nav_about_profil: 'School Profile',
+                nav_about_visi: 'Vision & Mission',
+                nav_about_sambutan: 'Principal Message',
+                nav_about_fasilitas: 'Facilities',
+                nav_about_pendidik: 'Educators',
+                nav_education: 'Education',
+                nav_smp: 'SMP IBS Al-Hamra',
+                nav_sma: 'SMA IBS Al-Hamra',
+                nav_program_unggulan: 'Featured Programs',
+                nav_admissions: 'Admissions',
+                nav_ppdb_info: 'Admissions Info',
+                nav_syarat: 'Requirements',
+                nav_alur: 'Registration Flow',
+                nav_biaya: 'Tuition & Fees',
+                nav_brosur: 'Brochure & Download',
+                nav_gallery: 'Gallery',
+                nav_ppdb: 'Enrollment',
+                nav_news: 'News',
+                nav_contact: 'Contact',
+                nav_login: 'Login',
+
+                hero_badge: 'WELCOME TO',
+                hero_title: 'IBS Al-Hamra Malang',
+                hero_subtitle: 'Preparing Excellent Muslim Generations with Qur\'anic Character Foundation',
+
+                sec_badge: 'FEATURED PROGRAMS',
+                sec_title: 'IBS Al-Hamra Education Levels',
+                sec_subtitle: 'Selected educational programs designed to shape an excellent Muslim generation with noble character, modern knowledge, and a global outlook.',
+
+                badge_smp: 'JUNIOR HIGH',
+                card_smp_title: 'SMP Program',
+                card_smp_desc: 'SMP IBS Alhamra features an Islamic curriculum-based education system to prepare future excellent Muslim generations.',
+                btn_smp: 'Explore SMP Program',
+
+                badge_sma: 'SENIOR HIGH',
+                card_sma_title: 'SMA Program',
+                card_sma_desc: 'SMA IBS Alhamra is an advanced program for students prepared to become creative individuals contributing to Islamic civilization.',
+                btn_sma: 'Explore SMA Program'
+            },
+            AR: {
+                dir: 'rtl',
+                nav_home: 'الرئيسية',
+                nav_about: 'عن المدرسة',
+                nav_about_profil: 'ملف المدرسة',
+                nav_about_visi: 'الرؤية والرسالة',
+                nav_about_sambutan: 'كلمة المدير',
+                nav_about_fasilitas: 'المرافق والمنشآت',
+                nav_about_pendidik: 'الكادر التعليمي',
+                nav_education: 'المراحل الدراسية',
+                nav_smp: 'المرحلة المتوسطة',
+                nav_sma: 'المرحلة الثانوية',
+                nav_program_unggulan: 'البرامج المتميزة',
+                nav_admissions: 'قبول الطلاب',
+                nav_ppdb_info: 'معلومات التسجيل',
+                nav_syarat: 'شروط القبول',
+                nav_alur: 'خطوات التسجيل',
+                nav_biaya: 'الرسوم الدراسية',
+                nav_brosur: 'الكتيب والتحميل',
+                nav_gallery: 'معرض الصور',
+                nav_ppdb: 'التسجيل الإلكتروني',
+                nav_news: 'الأخبار',
+                nav_contact: 'اتصل بنا',
+                nav_login: 'تسجيل الدخول',
+
+                hero_badge: 'أهلاً بكم في',
+                hero_title: 'معهد إمباير الهامبرا الإسلامي',
+                hero_subtitle: 'إعداد جيل مسلم متميز قائم على أساس أخلاق القرآن الكريم',
+
+                sec_badge: 'البرامج المتميزة',
+                sec_title: 'المراحل التعليمية في معهد الهامبرا',
+                sec_subtitle: 'خيارات البرامج التعليمية المصممة لإعداد جيل مسلم متميز ذي أخلاق كريمة وعلوم حديثة ورؤية عالمية.',
+
+                badge_smp: 'المرحلة المتوسطة',
+                card_smp_title: 'برنامج المتوسطة',
+                card_smp_desc: 'تتميز المرحلة المتوسطة بنظام تعليمي قائم على المنهج الإسلامي لإعداد أجيال مسلمة متميزة في المستقبل.',
+                btn_smp: 'تعرف على برنامج المتوسطة',
+
+                badge_sma: 'المرحلة الثانوية',
+                card_sma_title: 'برنامج الثانوية',
+                card_sma_desc: 'تعد المرحلة الثانوية برنامجًا متقدمًا للطلاب لإعدادهم ليكونوا أفرادًا مبدعين يساهمون في الحضارة الإسلامية.',
+                btn_sma: 'تعرف على برنامج الثانوية'
+            }
+        };
+
+        function applyLanguage(lang) {
+            const dict = i18nData[lang];
+            if (!dict) return;
+
+            // Set Direction (RTL for Arabic, LTR for others)
+            document.documentElement.dir = dict.dir;
+            document.body.dir = dict.dir;
+
+            // Translate elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.childNodes[0].nodeValue = dict[key] + ' ';
+                    } else {
+                        el.textContent = dict[key];
+                    }
+                }
+            });
+
+            // Update Header UI
+            const flagImg = document.getElementById('currentLangFlag');
+            const langText = document.getElementById('currentLangText');
+            const flags = {
+                'ID': 'https://cdn-icons-png.flaticon.com/128/11654/11654463.png',
+                'EN': 'https://cdn-icons-png.flaticon.com/128/197/197374.png',
+                'AR': 'https://cdn-icons-png.flaticon.com/128/197/197578.png'
+            };
+            if (flagImg && flags[lang]) flagImg.src = flags[lang];
+            if (langText) langText.textContent = lang;
+        }
+
+        // Interactive Language Switcher Listener
+        document.querySelectorAll('.lang-option').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                
+                applyLanguage(lang);
+
+                // Close dropdown safely
+                const dropdownBtn = document.getElementById('langDropdown');
+                if (dropdownBtn) {
+                    const bsDropdown = bootstrap.Dropdown.getInstance(dropdownBtn) || new bootstrap.Dropdown(dropdownBtn);
+                    if (bsDropdown) bsDropdown.hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

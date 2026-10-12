@@ -1,0 +1,19 @@
+{
+  "name": "thursina-iibs-website",
+  "version": "1.0.0",
+  "description": "Website Resmi Thursina IIBS Malang",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "thursina",
+    "iibs",
+    "website",
+    "pesantren",
+    "malang"
+  ],
+  "author": "Thursina IIBS",
+  "license": "ISC"
+}
