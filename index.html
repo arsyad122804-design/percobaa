@@ -832,38 +832,6 @@
         </div>
     </div>
 
-    <!-- Video Modal for Campus Profile Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content" style="background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6);">
-                <div class="modal-header border-0 pb-2 px-4 pt-3.5 d-flex justify-content-between align-items-center" style="border-bottom: 1px solid rgba(255,255,255,0.1) !important;">
-                    <h5 class="modal-title text-white font-weight-bold d-flex align-items-center" id="videoModalLabel" style="font-size: 18px;">
-                        <i class="fa fa-video text-warning me-2.5"></i> Video Profil & Kampus IBS Al-Hamra Malang
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="opacity: 0.8;"></button>
-                </div>
-                <div class="modal-body p-2 p-md-3 text-center">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 16px; overflow: hidden; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                        <video id="modalVideoPlayer" controls playsinline poster="asset/hero-poster.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
-                            <source src="asset/gemini_generated_video_c295d2a1.mp4" type="video/mp4">
-                            <source src="gemini_generated_video_c295d2a1.mp4" type="video/mp4">
-                            <source src="./asset/gemini_generated_video_c295d2a1.mp4" type="video/mp4">
-                            Browser Anda tidak mendukung tag video.
-                        </video>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mt-3 px-2 text-start">
-                        <div>
-                            <span class="badge rounded-pill me-2 px-3 py-1" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-weight: 700;">OFFICIAL VIDEO</span>
-                            <span class="text-white-50" style="font-size: 13px;">Islamic Boarding School Al-Hamra Malang</span>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
-
     <!-- Hero Section Start -->
     <section class="hero-custom position-relative d-flex flex-column justify-content-center align-items-center" style="position: relative; min-height: 88vh; margin: 16px 20px 0 20px; border-radius: 44px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: #0f172a url('asset/hero-poster.jpg') center/cover no-repeat;">
         
@@ -1034,29 +1002,9 @@
                         <p class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.95); line-height: 1.45; max-width: 880px; margin-left: auto; margin-right: auto; text-shadow: 0 2px 15px rgba(0,0,0,0.5); text-align: center;" data-i18n="hero_subtitle">
                             Menyiapkan Generasi Muslim Unggulan Dengan Fondasi Akhlak Al-Qur'an
                         </p>
-                        
-                        <!-- Hero Interactive Action Buttons -->
-                        <div class="mt-4 d-flex flex-wrap gap-3 justify-content-center align-items-center">
-                            <a href="#program" class="btn rounded-pill px-4 py-2.5 font-weight-bold d-flex align-items-center" style="background: #10b981; color: #ffffff; font-size: 15px; box-shadow: 0 4px 18px rgba(16, 185, 129, 0.45); text-decoration: none; transition: transform 0.2s ease;">
-                                <span data-i18n="hero_btn_explore">Jelajahi Program</span> <i class="fa fa-arrow-right ms-2" style="font-size: 13px;"></i>
-                            </a>
-                            <button type="button" class="btn btn-outline-light rounded-pill px-4 py-2.5 font-weight-bold d-flex align-items-center" id="btnHeroPlayVideo" data-bs-toggle="modal" data-bs-target="#videoModal" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.4); font-size: 15px; color: #ffffff; cursor: pointer; transition: all 0.2s ease;">
-                                <i class="fa fa-circle-play me-2 text-warning" style="font-size: 16px;"></i> <span data-i18n="hero_btn_video">Tonton Video Profil</span>
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Floating Video Toggle Badge (Bottom Right) -->
-        <div style="position: absolute; bottom: 20px; right: 28px; z-index: 10; display: flex; align-items: center; gap: 8px;">
-            <button id="heroVideoControlBtn" type="button" class="btn btn-sm rounded-pill d-flex align-items-center px-3 py-1.5" style="background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25); font-size: 12px; font-weight: 600; cursor: pointer;" title="Putar / Jeda Video Latar">
-                <i class="fa fa-pause me-1.5" id="heroVideoControlIcon" style="font-size: 11px; color: #10b981;"></i> <span id="heroVideoControlText">Video Aktif</span>
-            </button>
-            <button id="heroVideoMuteBtn" type="button" class="btn btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25); font-size: 12px; cursor: pointer;" title="Suara Video">
-                <i class="fa fa-volume-xmark" id="heroVideoMuteIcon" style="font-size: 12px;"></i>
-            </button>
         </div>
 
     </section>
@@ -1445,111 +1393,39 @@
             }
         });
 
-        // Hero Video Controller & Autoplay Enforcer
+        // Hero Background Video Autoplay Enforcer
         function initHeroVideo() {
             const video = document.getElementById('heroVideo');
-            const controlBtn = document.getElementById('heroVideoControlBtn');
-            const controlIcon = document.getElementById('heroVideoControlIcon');
-            const controlText = document.getElementById('heroVideoControlText');
-            const muteBtn = document.getElementById('heroVideoMuteBtn');
-            const muteIcon = document.getElementById('heroVideoMuteIcon');
-            const modalVideo = document.getElementById('modalVideoPlayer');
-            const videoModal = document.getElementById('videoModal');
-
             if (!video) return;
 
             video.defaultMuted = true;
             video.muted = true;
             video.playsInline = true;
 
-            function updateControlUI(isPlaying) {
-                if (!controlIcon || !controlText) return;
-                if (isPlaying) {
-                    controlIcon.className = 'fa fa-pause me-1.5';
-                    controlIcon.style.color = '#10b981';
-                    controlText.textContent = 'Video Aktif';
-                } else {
-                    controlIcon.className = 'fa fa-play me-1.5';
-                    controlIcon.style.color = '#fdd100';
-                    controlText.textContent = 'Putar Video';
-                }
-            }
-
             function tryPlay() {
                 video.defaultMuted = true;
                 video.muted = true;
                 const p = video.play();
                 if (p && p.catch) {
-                    p.then(function () {
-                        updateControlUI(true);
-                    }).catch(function (err) {
-                        updateControlUI(false);
+                    p.catch(function () {
                         const unlockPlay = function () {
-                            video.play().then(function () {
-                                updateControlUI(true);
-                            }).catch(function () {});
-                            ['click', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+                            video.play().catch(function () {});
+                            ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(function (evt) {
                                 window.removeEventListener(evt, unlockPlay);
                             });
                         };
-                        ['click', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+                        ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(function (evt) {
                             window.addEventListener(evt, unlockPlay, { once: true, passive: true });
                         });
                     });
                 }
             }
 
-            // Trigger immediately and on media ready events
             tryPlay();
-            video.addEventListener('canplay', function () { tryPlay(); });
-            video.addEventListener('loadeddata', function () { tryPlay(); });
-            video.addEventListener('play', function () { updateControlUI(true); });
-            video.addEventListener('pause', function () { updateControlUI(false); });
-
-            // Video Play/Pause Toggle Button
-            if (controlBtn) {
-                controlBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    if (video.paused) {
-                        video.play();
-                        updateControlUI(true);
-                    } else {
-                        video.pause();
-                        updateControlUI(false);
-                    }
-                });
-            }
-
-            // Video Mute/Unmute Toggle Button
-            if (muteBtn && muteIcon) {
-                muteBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    video.muted = !video.muted;
-                    if (video.muted) {
-                        muteIcon.className = 'fa fa-volume-xmark';
-                        muteBtn.style.color = '#ffffff';
-                    } else {
-                        muteIcon.className = 'fa fa-volume-high';
-                        muteBtn.style.color = '#10b981';
-                    }
-                });
-            }
-
-            // Sync with Video Modal
-            if (videoModal && modalVideo) {
-                videoModal.addEventListener('show.bs.modal', function () {
-                    video.pause();
-                    modalVideo.currentTime = 0;
-                    modalVideo.play().catch(function () {});
-                });
-                videoModal.addEventListener('hidden.bs.modal', function () {
-                    modalVideo.pause();
-                    tryPlay();
-                });
-            }
+            video.addEventListener('canplay', tryPlay);
+            video.addEventListener('loadeddata', tryPlay);
         }
 
-        // Initialize as early as possible
         initHeroVideo();
         document.addEventListener('DOMContentLoaded', initHeroVideo);
         window.addEventListener('load', initHeroVideo);
@@ -1637,8 +1513,6 @@
                 hero_badge: 'WELCOME TO',
                 hero_title: 'IBS Al-Hamra Malang',
                 hero_subtitle: 'Menyiapkan Generasi Muslim Unggulan Dengan Fondasi Akhlak Al-Qur\'an',
-                hero_btn_explore: 'Jelajahi Program',
-                hero_btn_video: 'Tonton Video Profil',
 
                 sec_badge: 'PROGRAM UNGGULAN',
                 sec_title: 'Jenjang Pendidikan IBS Al-Hamra',
@@ -1682,8 +1556,6 @@
                 hero_badge: 'WELCOME TO',
                 hero_title: 'IBS Al-Hamra Malang',
                 hero_subtitle: 'Preparing Excellent Muslim Generations with Qur\'anic Character Foundation',
-                hero_btn_explore: 'Explore Programs',
-                hero_btn_video: 'Watch Campus Video',
 
                 sec_badge: 'FEATURED PROGRAMS',
                 sec_title: 'IBS Al-Hamra Education Levels',
@@ -1727,8 +1599,6 @@
                 hero_badge: 'أهلاً بكم في',
                 hero_title: 'معهد إمباير الهامبرا الإسلامي',
                 hero_subtitle: 'إعداد جيل مسلم متميز قائم على أساس أخلاق القرآن الكريم',
-                hero_btn_explore: 'استكشاف البرامج',
-                hero_btn_video: 'مشاهدة فيديو المعهد',
 
                 sec_badge: 'البرامج المتميزة',
                 sec_title: 'المراحل التعليمية في معهد الهامبرا',
