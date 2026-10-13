@@ -1386,6 +1386,8 @@
             video.defaultMuted = true;
             video.muted = true;
             video.playsInline = true;
+            video.setAttribute('muted', '');
+            video.setAttribute('playsinline', '');
 
             function tryPlay() {
                 video.defaultMuted = true;
@@ -1397,11 +1399,11 @@
                             video.defaultMuted = true;
                             video.muted = true;
                             video.play().catch(function () {});
-                            ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(function (evt) {
+                            ['click', 'pointerdown', 'touchstart', 'scroll', 'keydown', 'wheel'].forEach(function (evt) {
                                 window.removeEventListener(evt, unlockPlay);
                             });
                         };
-                        ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(function (evt) {
+                        ['click', 'pointerdown', 'touchstart', 'scroll', 'keydown', 'wheel'].forEach(function (evt) {
                             window.addEventListener(evt, unlockPlay, { once: true, passive: true });
                         });
                     });
@@ -1409,11 +1411,30 @@
             }
 
             tryPlay();
-            video.addEventListener('canplay', tryPlay);
+            video.addEventListener('loadedmetadata', tryPlay);
             video.addEventListener('loadeddata', tryPlay);
+            video.addEventListener('canplay', tryPlay);
+            video.addEventListener('canplaythrough', tryPlay);
             video.addEventListener('ended', function () {
                 video.currentTime = 0;
                 tryPlay();
+            });
+
+            // Tap/click on hero triggers play if browser blocked autoplay
+            const heroSection = document.querySelector('.hero-custom');
+            if (heroSection) {
+                heroSection.addEventListener('click', function () {
+                    if (video.paused) {
+                        tryPlay();
+                    }
+                });
+            }
+
+            // Resume when tab regains focus
+            document.addEventListener('visibilitychange', function () {
+                if (!document.hidden && video.paused) {
+                    tryPlay();
+                }
             });
         }
 
