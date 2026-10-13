@@ -833,29 +833,13 @@
     </div>
 
     <!-- Hero Section Start -->
-    <section class="hero-custom position-relative d-flex flex-column justify-content-center align-items-center" style="position: relative; min-height: 88vh; margin: 16px 20px 0 20px; border-radius: 44px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: #0f172a url('asset/hero-poster.jpg') center/cover no-repeat;">
+    <section class="hero-custom position-relative d-flex flex-column justify-content-center align-items-center" style="position: relative; min-height: 88vh; margin: 16px 20px 0 20px; border-radius: 44px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background-color: #12223b; background-image: url('asset/hero-poster.jpg'), url('hero-poster.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
         
         <!-- Video Background (Gemini Generated Campus Video) -->
-        <video autoplay muted loop playsinline webkit-playsinline preload="auto" id="heroVideo" poster="asset/hero-poster.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+        <video autoplay muted loop playsinline webkit-playsinline preload="auto" id="heroVideo" src="asset/gemini_generated_video_c295d2a1.mp4" poster="asset/hero-poster.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; display: block;">
             <source src="asset/gemini_generated_video_c295d2a1.mp4" type="video/mp4">
             <source src="gemini_generated_video_c295d2a1.mp4" type="video/mp4">
-            <source src="./asset/gemini_generated_video_c295d2a1.mp4" type="video/mp4">
         </video>
-        <script>
-            // Immediate mute enforcement before media engine loads
-            (function () {
-                var v = document.getElementById('heroVideo');
-                if (v) {
-                    v.defaultMuted = true;
-                    v.muted = true;
-                    v.playsInline = true;
-                    var p = v.play();
-                    if (p && p.catch) {
-                        p.catch(function () {});
-                    }
-                }
-            })();
-        </script>
 
         <!-- Video Overlay with Subtle Gradient -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(15, 23, 42, 0.22) 0%, rgba(15, 23, 42, 0.45) 100%); z-index: 2; pointer-events: none;"></div>
@@ -1409,6 +1393,8 @@
                 if (p && p.catch) {
                     p.catch(function () {
                         const unlockPlay = function () {
+                            video.defaultMuted = true;
+                            video.muted = true;
                             video.play().catch(function () {});
                             ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(function (evt) {
                                 window.removeEventListener(evt, unlockPlay);
@@ -1424,6 +1410,10 @@
             tryPlay();
             video.addEventListener('canplay', tryPlay);
             video.addEventListener('loadeddata', tryPlay);
+            video.addEventListener('ended', function () {
+                video.currentTime = 0;
+                tryPlay();
+            });
         }
 
         initHeroVideo();
