@@ -983,8 +983,8 @@
                         <span class="badge-tag mb-3 text-center" style="color: #fdd100; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; display: inline-block;" data-i18n="hero_badge">
                             WELCOME TO
                         </span>
-                        <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif; font-size: 68px; font-weight: 800; color: #ffffff; line-height: 1.12; letter-spacing: -1.8px; margin-bottom: 22px; text-shadow: 0 4px 30px rgba(0,0,0,0.6); max-width: 1050px; margin-left: auto; margin-right: auto; text-align: center;" data-i18n="hero_title">
-                            IBS Al-Hamra Malang
+                        <h1 class="text-center" style="font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif; font-size: 58px; font-weight: 800; color: #ffffff; line-height: 1.15; letter-spacing: -1px; margin-bottom: 22px; text-shadow: 0 4px 30px rgba(0,0,0,0.6); max-width: 1100px; margin-left: auto; margin-right: auto; text-align: center;" data-i18n="hero_title">
+                            AL HAMRA ISLAMIC<br>BOARDING SCHOOL - MALANG
                         </h1>
                         <p class="text-center" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.95); line-height: 1.45; max-width: 880px; margin-left: auto; margin-right: auto; text-shadow: 0 2px 15px rgba(0,0,0,0.5); text-align: center;" data-i18n="hero_subtitle">
                             Menyiapkan Generasi Muslim Unggulan Dengan Fondasi Akhlak Al-Qur'an
@@ -1525,7 +1525,7 @@
                 nav_login: 'Login',
 
                 hero_badge: 'WELCOME TO',
-                hero_title: 'IBS Al-Hamra Malang',
+                hero_title: 'AL HAMRA ISLAMIC<br>BOARDING SCHOOL - MALANG',
                 hero_subtitle: 'Menyiapkan Generasi Muslim Unggulan Dengan Fondasi Akhlak Al-Qur\'an',
 
                 sec_badge: 'PROGRAM UNGGULAN',
@@ -1568,7 +1568,7 @@
                 nav_login: 'Login',
 
                 hero_badge: 'WELCOME TO',
-                hero_title: 'IBS Al-Hamra Malang',
+                hero_title: 'AL HAMRA ISLAMIC<br>BOARDING SCHOOL - MALANG',
                 hero_subtitle: 'Preparing Excellent Muslim Generations with Qur\'anic Character Foundation',
 
                 sec_badge: 'FEATURED PROGRAMS',
@@ -1611,7 +1611,7 @@
                 nav_login: 'تسجيل الدخول',
 
                 hero_badge: 'أهلاً بكم في',
-                hero_title: 'معهد إمباير الهامبرا الإسلامي',
+                hero_title: 'معهد الهامبرا الإسلامي<br>الداخلي - مالانج',
                 hero_subtitle: 'إعداد جيل مسلم متميز قائم على أساس أخلاق القرآن الكريم',
 
                 sec_badge: 'البرامج المتميزة',
@@ -1645,6 +1645,8 @@
                     const icon = el.querySelector('i');
                     if (icon) {
                         el.childNodes[0].nodeValue = dict[key] + ' ';
+                    } else if (dict[key].includes('<br') || dict[key].includes('<span')) {
+                        el.innerHTML = dict[key];
                     } else {
                         el.textContent = dict[key];
                     }
