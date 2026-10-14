@@ -66,6 +66,8 @@ function startServer(port) {
           'Accept-Ranges': 'bytes',
           'Content-Length': chunksize,
           'Content-Type': contentType,
+          'Access-Control-Allow-Origin': '*',
+          'Cache-Control': 'no-cache',
         };
         res.writeHead(206, head);
         file.pipe(res);
