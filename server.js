@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
-const ROOT_DIR = __dirname;
+const ROOT_DIR = path.resolve(__dirname);
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
@@ -32,12 +32,13 @@ function startServer(port) {
       safeUrl = '/index.html';
     }
 
-    console.log(`[REQ ${new Date().toLocaleTimeString()}] ${req.method} ${safeUrl}`);
+    // Strip leading slashes to prevent absolute path confusion on Windows
+    const relativeUrl = safeUrl.replace(/^[/\\]+/, '');
+    const filePath = path.resolve(ROOT_DIR, relativeUrl);
 
-    const filePath = path.join(ROOT_DIR, safeUrl);
-
-    // Prevent directory traversal
-    if (!filePath.startsWith(ROOT_DIR)) {
+    // Prevent directory traversal (case-insensitive for Windows filesystem)
+    if (!filePath.toLowerCase().startsWith(ROOT_DIR.toLowerCase())) {
+      console.warn(`[403 FORBIDDEN] ${req.method} ${safeUrl}`);
       res.writeHead(403, { 'Content-Type': 'text/plain' });
       res.end('Forbidden');
       return;
@@ -45,6 +46,7 @@ function startServer(port) {
 
     fs.stat(filePath, (err, stats) => {
       if (err || !stats.isFile()) {
+        console.warn(`[404 NOT FOUND] ${req.method} ${safeUrl}`);
         res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
         res.end(`<h2>404 Not Found</h2><p>Halaman atau file <code>${safeUrl}</code> tidak ditemukan.</p>`);
         return;
@@ -60,6 +62,7 @@ function startServer(port) {
         const start = parseInt(parts[0], 10);
         const end = parts[1] ? parseInt(parts[1], 10) : stats.size - 1;
         const chunksize = (end - start) + 1;
+        console.log(`[206 PARTIAL] ${req.method} ${safeUrl} (bytes ${start}-${end}/${stats.size})`);
         const file = fs.createReadStream(filePath, { start, end });
         const head = {
           'Content-Range': `bytes ${start}-${end}/${stats.size}`,
@@ -74,6 +77,7 @@ function startServer(port) {
         return;
       }
 
+      console.log(`[200 OK] ${req.method} ${safeUrl} (${stats.size} bytes)`);
       res.writeHead(200, {
         'Content-Type': contentType,
         'Content-Length': stats.size,
