@@ -170,26 +170,28 @@
 
         /* Dropdown Menus */
         .dropdown-menu {
-            border: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-            border-radius: 12px;
-            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35) !important;
+            border-radius: 14px !important;
+            padding: 8px !important;
             margin-top: 10px;
-            background: #ffffff;
+            background: #12223b !important;
+            backdrop-filter: blur(12px);
             animation: fadeIn 0.25s ease-in-out;
         }
         .dropdown-menu .dropdown-item {
             font-size: 14px;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 6px;
-            color: #212529;
+            font-weight: 600;
+            padding: 9px 18px;
+            border-radius: 8px;
+            color: #ffffff !important;
             transition: all 0.2s ease;
         }
-        .dropdown-menu .dropdown-item:hover {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-            transform: translateX(4px);
+        .dropdown-menu .dropdown-item:hover,
+        .dropdown-menu .dropdown-item:focus {
+            background: rgba(16, 185, 129, 0.2) !important;
+            color: #10b981 !important;
+            transform: translateX(5px);
         }
 
         /* Highlighted Menu (Enrol Now) */
@@ -875,11 +877,11 @@
                                     <span data-i18n="nav_about">Tentang Sekolah</span> <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px; color: #10b981;"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3 mt-2" style="background-color: #12223b;">
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_profil">Profil Sekolah</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_visi">Visi & Misi</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_sambutan">Sambutan Pimpinan</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_fasilitas">Fasilitas</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_about_pendidik">Tenaga Pendidik</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_about_profil">Profil Sekolah</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_about_visi">Visi & Misi</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_about_sambutan">Sambutan Pimpinan</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_about_fasilitas">Fasilitas</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_about_pendidik">Tenaga Pendidik</a></li>
                                 </ul>
                             </li>
 
@@ -889,9 +891,9 @@
                                     <span data-i18n="nav_education">Jenjang</span> <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px; color: #10b981;"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3 mt-2" style="background-color: #12223b;">
-                                    <li><a class="dropdown-item py-2" href="https://ibsalhamra.sch.id/" data-i18n="nav_smp">SMP IBS Al-Hamra</a></li>
-                                    <li><a class="dropdown-item py-2" href="https://ibsalhamra.sch.id/" data-i18n="nav_sma">SMA IBS Al-Hamra</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_program_unggulan">Program Unggulan</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="https://ibsalhamra.sch.id/" data-i18n="nav_smp">SMP IBS Al-Hamra</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="https://ibsalhamra.sch.id/" data-i18n="nav_sma">SMA IBS Al-Hamra</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_program_unggulan">Program Unggulan</a></li>
                                 </ul>
                             </li>
 
@@ -901,11 +903,11 @@
                                     <span data-i18n="nav_admissions">Penerimaan Santri</span> <i class="fa-solid fa-chevron-down ms-1" style="font-size: 11px; color: #10b981;"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3 mt-2" style="background-color: #12223b;">
-                                    <li><a class="dropdown-item py-2" href="https://ibsalhamra.sch.id/" target="_blank" data-i18n="nav_ppdb_info">Informasi PPDB</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_syarat">Syarat Pendaftaran</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_alur">Alur Pendaftaran</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_biaya">Biaya Pendidikan</a></li>
-                                    <li><a class="dropdown-item py-2" href="#" data-i18n="nav_brosur">Brosur & Download</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="https://ibsalhamra.sch.id/" target="_blank" data-i18n="nav_ppdb_info">Informasi PPDB</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_syarat">Syarat Pendaftaran</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_alur">Alur Pendaftaran</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_biaya">Biaya Pendidikan</a></li>
+                                    <li><a class="dropdown-item py-2 text-white" style="color: #ffffff !important;" href="#" data-i18n="nav_brosur">Brosur & Download</a></li>
                                 </ul>
                             </li>
 
